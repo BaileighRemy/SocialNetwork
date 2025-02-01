@@ -1,5 +1,5 @@
 import Thought from '../models/Thought.js';
-// import { Request, Response } from 'express';
+
 
 export const getThoughts = async (_req, res) => {
     try {

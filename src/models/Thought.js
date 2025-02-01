@@ -1,5 +1,6 @@
 import { Schema, model, Types } from 'mongoose';
 
+
 const reactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
@@ -12,6 +13,7 @@ const reactionSchema = new Schema({
     },
     username: {
         type: String,
+        ref: 'User',
         required: 'You need to leave a username!'
     },
     createdAt: {
@@ -35,6 +37,7 @@ const thoughtSchema = new Schema({
     },
     username: {
         type: String,
+        ref: 'User',
         required: 'You need to leave a username!'
     },
     reactions: [reactionSchema]
